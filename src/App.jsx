@@ -27,11 +27,11 @@ function App() {
 
         {/* take video input */}
         <div className='w-full pt-2'>
-          <div className='flex'>
-          <input type="text" ref={url} placeholder='  Enter video url' className='w-1/4 mx-1 rounded-sm' />
-          <input type="text" ref={caption} placeholder='  Enter caption' className='w-1/4 mx-1 rounded-sm' />
-          <input type="text" ref={timeStamp} placeholder='  Enter timestamp' className='w-1/4 mx-1 rounded-sm' />
-          <button onClick={loadVideo} className='px-1 bg-gray-700 rounded text-gray-400 hover:text-gray-900 hover:bg-gray-400'>Search</button>
+          <div className='flex w-full'>
+          <input type="text" ref={url} placeholder='  Enter video url' className=' w-5/12 mx-1 rounded-sm' required />
+          <input type="text" ref={caption} placeholder='  Enter caption' className='w-4/12 mx-1 rounded-sm' required />
+          <input type="text" ref={timeStamp} placeholder='hh:mm:ss - timestamp' className='w-2/12 mx-1 rounded-sm' required />
+          <button onClick={loadVideo} className='w-1/12 px-1 bg-gray-700 rounded text-gray-400 hover:text-gray-900 hover:bg-gray-400'>Search</button>
           </div>
 
           <div className=''>

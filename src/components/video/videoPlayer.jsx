@@ -4,7 +4,17 @@ import ReactPlayer from 'react-player'
 function Video({ url, caption, timeStamp }) {
 
     // playing={true} onEnded={videoAutoPlay}
-    const [show,setShow] = useState(false)
+    const [show, setShow] = useState(false)
+
+    let time = 0, mul = 1
+    timeStamp.split(":").reverse().forEach((value) => {
+        try {
+            time = time + parseInt(value) * mul
+            mul = mul * 60
+        } catch (err) {
+            console.log(err)
+        }
+    })
 
     return (<>
         <div className="w-full p-2">
@@ -16,7 +26,7 @@ function Video({ url, caption, timeStamp }) {
                 playing={true}
                 captions={caption}
                 onProgress={({ playedSeconds }) => {
-                    if (playedSeconds > 20 && playedSeconds < 21) {
+                    if (playedSeconds > time && playedSeconds < time+2) {
                         setShow(true)
                     }
                 }}
