@@ -1,0 +1,21 @@
+Things thought when designing:
+1.Looks and finish should be decent
+2.User should be easily able to identify which input box is for what value.
+3.Responsive design on different device screens.
+4.Least buffering for better user experience.
+
+Features implemented:
+1.Takes url,caption and timestamp input.
+2.Search button to search for hosted video and generate video using react-player.
+3.Created a video player component that can handle all kind of video
+4.implemented a histroy list of all the video we have played.
+5.Responsive across different device screens.
+
+Trade off:
+1.Timestamp validation is not done,timestamp is taken in text format, which would allow the user to enter any value,I have handled the error using try catch.
+2.The history list implemented can be clicked to play that video.
+
+If more time was given:
+1.Will implement data validation,so correct data formate is entered.
+2.Implement contextAPI to handle playing url, so we can play videos even from List (History List).
+3.Implement sort or search bar to search from the history list.
