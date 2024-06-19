@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-      <div className='flex flex-col max-w-screen min-h-screen bg-[url(./img1.jpg)] bg-cover'>
+      <div className='flex flex-col max-w-screen min-h-screen bg-[url(./resources/img1.jpg)] bg-cover'>
 
         {/* take video input */}
         <div className='w-full pt-2'>
